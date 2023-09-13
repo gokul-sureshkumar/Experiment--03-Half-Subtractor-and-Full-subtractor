@@ -34,21 +34,59 @@ Write the detailed procedure here
 
 ## Program:
 /*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: GOKUL S
+RegisterNumber: 212222110011
+
+### Half subtractor:
+module halfsub(a,b,Diff,Borrow);
+input a,b;
+output Diff,Borrow;
+assign Diff = (a^b);
+assign Borrow = (~a&b);
+endmodule
+
+### Full subtractor
+module fullsub(A,B,Bin,diff,borrow);
+input A,B,Bin;
+output diff,borrow;
+assign diff=(A^B^Bin);
+assign borrow=((~A&B)|(~(A^B)&Bin));
+endmodule
+```
 */
 
-## Output:
+## Output Waveform:
+## Half Subtracker:
+
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/4c3f621a-80a1-4e0b-9d53-f83d8fe737fb)
+
+## Full Subtracker:
+
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/56fe983c-1466-473c-ab5d-c33f6bd35649)
+
 
 ## Truthtable
 
+## Half Subtracker:
 
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/96d22095-10d3-4c85-8dda-1dbb8944a6dd)
+
+## Full Subtracker:
+
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/8910c24f-6b32-4411-a8ae-4053d13d2a14)
 
 ##  RTL realization
+## Half Subtracker:
+
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/6826427c-5abe-40e4-9cff-0e1e585b4448)
+
+## Full SubTracker:
+
+![image](https://github.com/gokul-sureshkumar/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/121148715/1bc5e661-0c85-4259-a5fb-167d610d194c)
 
 
-## Timing diagram 
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
